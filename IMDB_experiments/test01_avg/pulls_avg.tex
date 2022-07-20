@@ -1,0 +1,51 @@
+% This file was created with tikzplotlib v0.9.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=white!80!black},
+tick align=outside,
+tick pos=left,
+title={pulls by arm
+4 simulations},
+x grid style={white!69.0196078431373!black},
+xmin=-0.05, xmax=1.05,
+xtick style={color=black},
+xtick={0,1},
+xticklabel style={rotate=45.0},
+xticklabels={ogd3,lr2},
+y grid style={white!69.0196078431373!black},
+ymin=9557.48528250114, ymax=40442.5147174989,
+ytick style={color=black}
+]
+\path [draw=color0, semithick]
+(axis cs:0,10961.3502568192)
+--(axis cs:0,11243.6497431808);
+
+\path [draw=color0, semithick]
+(axis cs:1,38756.3502568192)
+--(axis cs:1,39038.6497431808);
+
+\addplot [semithick, color0, mark=-, mark size=3, mark options={solid}, only marks]
+table {%
+0 10961.3505859375
+1 38756.3515625
+};
+\addlegendentry{UCB ours}
+\addplot [semithick, color0, mark=-, mark size=3, mark options={solid}, only marks]
+table {%
+0 11243.6494140625
+1 39038.6484375
+};
+\addlegendentry{UCB ours}
+\addplot [semithick, color0, mark=square*, mark size=2.5, mark options={solid}, only marks]
+table {%
+0 11102.5
+1 38897.5
+};
+\addlegendentry{UCB ours}
+\end{axis}
+
+\end{tikzpicture}

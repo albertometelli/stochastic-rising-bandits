@@ -1,0 +1,92 @@
+% This file was created with tikzplotlib v0.9.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=white!80!black},
+tick align=outside,
+tick pos=left,
+title={pulls by arm
+4 simulations},
+x grid style={white!69.0196078431373!black},
+xmin=-0.1025, xmax=2.1525,
+xtick style={color=black},
+xtick={0,1,2},
+xticklabel style={rotate=45.0},
+xticklabels={ada1,ogd3,lr2},
+y grid style={white!69.0196078431373!black},
+ymin=-2474.37262949316, ymax=52406.109282347,
+ytick style={color=black}
+]
+\path [draw=color0, semithick]
+(axis cs:0,20.1947301359392)
+--(axis cs:0,55.3052698640608);
+
+\path [draw=color0, semithick]
+(axis cs:1,49836.9580772821)
+--(axis cs:1,49911.5419227179);
+
+\path [draw=color0, semithick]
+(axis cs:2,67.5305105095413)
+--(axis cs:2,108.469489490459);
+
+\path [draw=color1, semithick]
+(axis cs:0.05,142.809868096578)
+--(axis cs:0.05,248.190131903422);
+
+\path [draw=color1, semithick]
+(axis cs:1.05,4577.80439682693)
+--(axis cs:1.05,8908.19560317307);
+
+\path [draw=color1, semithick]
+(axis cs:2.05,40870.0985648449)
+--(axis cs:2.05,45252.9014351551);
+
+\addplot [semithick, color0, mark=-, mark size=3, mark options={solid}, only marks]
+table {%
+0 20.194730758667
+1 49836.95703125
+2 67.5305099487305
+};
+\addlegendentry{UCB ours}
+\addplot [semithick, color0, mark=-, mark size=3, mark options={solid}, only marks]
+table {%
+0 55.3052711486816
+1 49911.54296875
+2 108.46949005127
+};
+\addlegendentry{UCB ours}
+\addplot [semithick, color1, mark=-, mark size=3, mark options={solid}, only marks]
+table {%
+0.0499999523162842 142.809875488281
+1.04999995231628 4577.80419921875
+2.04999995231628 40870.09765625
+};
+\addlegendentry{UCB ours}
+\addplot [semithick, color1, mark=-, mark size=3, mark options={solid}, only marks]
+table {%
+0.0499999523162842 248.190124511719
+1.04999995231628 8908.1953125
+2.04999995231628 45252.90234375
+};
+\addlegendentry{UCB ours}
+\addplot [semithick, color0, mark=square*, mark size=2.5, mark options={solid}, only marks]
+table {%
+0 37.75
+1 49874.25
+2 88
+};
+\addlegendentry{UCB ours}
+\addplot [semithick, color1, mark=square*, mark size=2.5, mark options={solid}, only marks]
+table {%
+0.0499999523162842 195.5
+1.04999995231628 6743
+2.04999995231628 43061.5
+};
+\addlegendentry{UCB ours}
+\end{axis}
+
+\end{tikzpicture}

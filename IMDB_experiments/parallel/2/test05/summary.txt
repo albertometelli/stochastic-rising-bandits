@@ -1,0 +1,52 @@
+
+IMDB EXPERIMENT:
+features = 10000
+points = 50000
+arm 0 	: ADAGRAD alpha = 0.001
+arm 1 	: OGD beta = 0.1
+arm 2 	: Logistic Regression alpha = 0.003
+----------------------------------------
+
+best arm = arm 2T = 50000
+UCB ours
+
+arm pulls = [  133 10514 39353]
+expected cumul regret = 1411.1488071636588
+observed cumul regret = 1399.3086479024992
+----------------------------------------
+SW-UCB
+
+arm pulls = [   38 49915    47]
+expected cumul regret = 1536.2046910360684
+observed cumul regret = 1536.969816948883
+----------------------------------------
+SW-TS
+
+arm pulls = [ 3334 26421 20245]
+expected cumul regret = 3557.7664561571423
+observed cumul regret = 3573.314802626413
+----------------------------------------
+Rexp3
+
+arm pulls = [10919 19889 19192]
+expected cumul regret = 5757.182893926473
+observed cumul regret = 5746.5327319106555
+----------------------------------------
+Ser4
+
+arm pulls = [13143 18745 18112]
+expected cumul regret = 6376.502432623504
+observed cumul regret = 6376.553211821944
+----------------------------------------
+KL-UCB
+
+arm pulls = [    1     1 49998]
+expected cumul regret = 0.8796989374305471
+observed cumul regret = -10.499825124877187
+----------------------------------------
+SW-KL-UCB
+
+arm pulls = [   84 49862    54]
+expected cumul regret = 1556.0269098328527
+observed cumul regret = 1578.8558908434331
+----------------------------------------
